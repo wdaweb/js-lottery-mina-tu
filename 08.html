@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // const rand = (min, max) => {
+        //     let randNumbers = []
+        //     for (let i = 0; i < 6; i++) {
+        //         randNumbers.push(Math.round(Math.random() * (max - min + 1)) + min)
+
+        //     }
+        //     return randNumbers
+        // };
+        // const rand2 = (min2, max2) => {
+
+        //     return Math.round(Math.random() * (max2 - min2 + 1)) + min2;
+
+        // }
+        // document.write(`A區:${rand(1, 38)}B區:${rand2(1, 8)}`)
+
+
+
+
+        for (let i = 0; i < 6; i++) {
+            const number = rand(1, 38)
+            if (groupA.includes(number)) {
+                i--
+            } else {
+                groupA.push(number)
+            }
+        }
+        console.log(groupA)
+
+
+        // while
+        while (groupA.length < 6) {
+            const number = rand(1, 38)
+            if (!groupA.includes(number)) {
+                groupA.push(number)
+            }
+
+        }
+        console.log(groupA)
+    </script>
+</body>
+
+</html>
